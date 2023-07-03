@@ -28,6 +28,10 @@ nav h3 {
   font-size: 24px;
 }
 
+nav i {
+  display: none;
+}
+
 ul {
   display: flex;
   list-style: none;
@@ -84,4 +88,90 @@ article p {
   padding: 1.2rem 2.5rem;
   color: #000;
   border: 1px solid purple;
+}
+
+/* Responsives 992px*/
+@media screen and (max-width: 992px) {
+  nav div {
+    display: none;
+  }
+
+  article h1 {
+    font-size: 40px;
+  }
+  article p {
+    font-size: 15px;
+    margin: 1rem 0;
+  }
+  .art_text div button:nth-of-type(1),
+  .art_text div button:nth-of-type(2) {
+    font-size: 18px;
+    padding: 0.8rem 1.1rem;
+  }
+  .art_text div {
+    display: flex;
+  }
+}
+
+/* Responsives 768px*/
+@media screen and (max-width: 768px) {
+  article h1 {
+    font-size: 24px;
+  }
+  article p {
+    font-size: 12px;
+    margin: 1rem 0;
+  }
+  .art_text div button:nth-of-type(1),
+  .art_text div button:nth-of-type(2) {
+    font-size: 14px;
+    padding: 0.6rem 0.8rem;
+  }
+  .art_text div {
+    display: flex;
+  }
+}
+
+/* Responsives 576px*/
+@media screen and (max-width: 576px) {
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+    background-color: #fff;
+    top: 0;
+    right: -200px;
+    height: 100vh;
+    padding: 2rem;
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  nav i {
+    display: block;
+    font-size: 24px;
+  }
+
+  article {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  article h1 {
+    font-size: 36px;
+  }
+
+  article p {
+    font-size: 18px;
+  }
+
+  article img,
+  .art_text {
+    width: 80%;
+  }
+  .art_text div {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
